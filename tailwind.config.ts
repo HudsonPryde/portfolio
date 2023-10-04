@@ -26,9 +26,14 @@ const config: Config = {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(50%)' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '-1000% 0' },
+          '100%': { backgroundPosition: '1000% 0' },
+        }
       },
       animation: {
         point: 'point 2s infinite',
+        shimmer: 'shimmer 2s infinite',
       },
     },
   },
