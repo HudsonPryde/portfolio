@@ -23,14 +23,14 @@ export default function Home() {
             <Image src="./link_FILL0_wght400_GRAD0_opsz24.svg" alt="link icon" width={44} height={44} className='invert'/>
             <p className="text-4xl tracking-tighter font-semibold text-white">Links</p>
             </div>
-            <div className="px-8 py-1 m-1 ml-4 bg-rose-200 rounded-full">
-              <Image src="./east_FILL0_wght400_GRAD0_opsz24.svg" alt="east icon" width={34} height={34} className=''/>
+            <div className="flex flex-1 flex-row justify-end px-8 py-1 m-1 ml-4 rounded-full">
+              <Image src="./east_FILL0_wght400_GRAD0_opsz24.svg" alt="east icon" width={34} height={34} className='invert'/>
             </div> 
           </div>
-            <div className="bg-dark rounded-full p-2">
+            <div className="bg-blue-900 rounded-full p-2 hover:scale-105">
               <a href='https://www.linkedin.com/in/hudsonpryde/' target='_blank' rel='noopener'><Image src="./linkedin.svg" alt="linkedin icon" width={34} height={34} className="invert"/></a>
             </div>
-            <div className="bg-dark rounded-full p-2">
+            <div className="bg-orange-600 rounded-full p-2 hover:scale-105">
               <a href='https://github.com/HudsonPryde' target='_blank' rel='noopener'><Image src="./github-mark-white.svg" alt="github icon" width={34} height={34}/></a>
             </div>
           </div>

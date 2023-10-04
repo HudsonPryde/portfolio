@@ -20,7 +20,16 @@ const config: Config = {
       fontFamily: {
         raleway: ['var(--font-raleway)'],
         young: ['var(--font-young)'],
-      }
+      },
+      keyframes: {
+        point: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(50%)' },
+        },
+      },
+      animation: {
+        point: 'point 2s infinite',
+      },
     },
   },
   plugins: [],
