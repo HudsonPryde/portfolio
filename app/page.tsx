@@ -6,16 +6,16 @@ export default function Home() {
     <main className="flex w-screen h-screen flex-col p-12 font-inter overflow-x-hidden">
       <div className="flex bg-primary w-full h-1/6 flex-col rounded-2xl justify-center m-2">
         <div className="flex flex-row items-center">
-          <p className=' text-8xl font-semibold align-middle tracking-tighter pl-6 font-young'>Hudson Pryde</p>
+          <p className='text-8xl font-semibold align-middle tracking-tighter pl-6 font-young'>Hudson Pryde</p>
           <div className=" max-w-xl flex flex-row flex-wrap justify-center items-center">
             <div className="border-[3px] border-black rounded-full h-12 w-54 flex flex-row justify-center m-2">
-              <p className="text-xl tracking-tighter flex flex-1 flex-col justify-center bg-gradient-to-tr from-amber-300 to-red-300 rounded-full p-4 m-1 font-semibold text-center">Software Engineer</p>
+              <p style={{ backgroundSize: '600% 600%' }} className="text-xl tracking-tighter flex flex-1 flex-col justify-center bg-gradient-to-tr from-amber-300 via-red-400 to-amber-300 rounded-full p-4 m-1 font-semibold text-center animate-shimmer">Software Engineer</p>
             </div>
             <div className="border-[3px] border-black rounded-full h-12 w-54 flex flex-row justify-center m-2">
-              <p className="text-xl tracking-tighter flex flex-1 flex-col justify-center bg-gradient-to-tr from-blue-300 to-violet-300 rounded-full p-4 m-1 font-semibold text-center animate-shimmer">Full Stack Developer</p>
+              <p style={{ backgroundSize: '600% 600%' }} className="text-xl tracking-tighter flex flex-1 flex-col justify-center bg-gradient-to-tr from-blue-300 via-violet-400 to-blue-300 rounded-full p-4 m-1 font-semibold text-center animate-shimmer">Full Stack Developer</p>
             </div>
             <div className="border-[3px] border-black rounded-full h-12 w-54 flex flex-row justify-center m-2">
-              <p className="text-xl tracking-tighter flex flex-1 flex-col justify-center bg-gradient-to-tr from-emerald-300 to-lime-300 rounded-full p-4 m-1 font-semibold text-center">AI Enthusiast</p>
+              <p style={{ backgroundSize: '600% 600%' }} className="text-xl tracking-tighter flex flex-1 flex-col justify-center bg-gradient-to-tr from-emerald-300 via-lime-400 to-emerald-300 rounded-full p-4 m-1 font-semibold text-center animate-shimmer">AI Enthusiast</p>
             </div>
           </div>
           <div className='flex flex-1 justify-center space-x-2 self-start m-2'>
