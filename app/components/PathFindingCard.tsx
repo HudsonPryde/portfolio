@@ -16,7 +16,7 @@ export default function PathFindingCard() {
         })
     }
     return (
-        <motion.main layout className={`flex flex-col p-6 bg-[#eb3d00] m-2 rounded-2xl font-raleway justify-between ${showContent ? 'max-w-2xl' : 'max-w-sm'}`}>
+        <motion.main layout className={`flex flex-col p-6 bg-[#eb3d00] m-2 rounded-2xl font-raleway justify-between ${showContent ? 'max-w-4xl' : 'max-w-sm'}`}>
             <LayoutGroup>
             {!showContent ? 
             <motion.div className='flex flex-col'>
@@ -35,7 +35,7 @@ export default function PathFindingCard() {
             : 
             <motion.div>
                 <PathingTemplate>
-                    <button onClick={() => toggleCard()}className='flex flex-row self-start justify-start items-center pb-4'><Image src="../../collapse-icon.svg" alt="collapse" width={30} height={30}/><p className="text-lg">Close</p></button>
+                    <button onClick={() => toggleCard()} className='flex flex-row self-start justify-start items-center pb-4'><Image src="../../collapse-icon.svg" alt="collapse" width={30} height={30}/><p className="text-lg">Close</p></button>
                     <Pathing />
                 </PathingTemplate>
             </motion.div>
