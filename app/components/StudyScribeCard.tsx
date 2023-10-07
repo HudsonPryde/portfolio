@@ -3,6 +3,7 @@ import { useState } from "react";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { storage } from "../firebase";
 import Image from 'next/image'
+import { motion } from "framer-motion";
 
 export default function StudyScribeCard() {
     const [videoUrl, setVideoUrl] = useState<undefined|string>(undefined);
@@ -15,7 +16,7 @@ export default function StudyScribeCard() {
         console.log(error);
     });
     return (
-        <main className="flex flex-1 flex-col p-6 bg-primary m-2 rounded-2xl font-raleway max-w-sm">
+        <motion.main layout className="flex flex-1 flex-col p-6 bg-primary m-2 rounded-2xl font-raleway max-w-sm">
             <div className="flex flex-row space-x-1 justify-end">
                 <Image src="./react-icon.svg" alt="React" width={34} height={34} className="border-[2px] border-[#149eca] rounded-full p-1"/>
                 <Image src="./expo-icon.svg" alt="Expo" width={34} height={34} className="border-[2px] border-black rounded-full p-1"/>
@@ -34,6 +35,6 @@ export default function StudyScribeCard() {
             <div className="flex flex-1 flex-row justify-center mt-4">
                 <a href="https://apps.apple.com/us/app/study-scribe/id6451150726" target='_blank' rel='noopener'><Image src="./Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" width={180} height={40} className="self-center"/></a>
             </div>
-        </main>
+        </motion.main>
     );
 }

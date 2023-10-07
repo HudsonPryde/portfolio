@@ -15,7 +15,7 @@ const config: Config = {
       },
       backgroundColor: {
         'primary': '#fefefe',
-        'dark': '#050505',
+        'dark': '#141414',
       },
       fontFamily: {
         raleway: ['var(--font-raleway)'],
@@ -30,12 +30,22 @@ const config: Config = {
           '0%': { backgroundPosition: '90% 0%' },
           '50%': { backgroundPosition: '11% 100%' },
           '100%': {backgroundPosition: '90% 0%'}
+        },
+        shake: {
+          '0%': { transform: 'rotate(0deg)'},
+          '25%': { transform: 'rotate(-30deg)'},
+          '75%': { transform: 'rotate(30deg)'},
+          '100%': { transform: 'rotate(0deg)'},
         }
       },
       animation: {
         point: 'point 2s infinite',
         shimmer: 'shimmer 3s ease infinite',
+        shake: 'shake 0.5s ease-out'
       },
+      transitionProperty: {
+        width: 'width, height'
+      }
     },
   },
   plugins: [],

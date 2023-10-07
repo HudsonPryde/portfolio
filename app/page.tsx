@@ -1,6 +1,8 @@
+'use client'
 import Image from 'next/image' 
 import StudyScribeCard from './components/StudyScribeCard'
 import PathFindingCard from './components/PathFindingCard'
+import { motion, LayoutGroup } from 'framer-motion'
 export default function Home() {
   return (
     <main className="flex w-screen h-screen flex-col p-12 font-inter overflow-x-hidden">
@@ -38,12 +40,12 @@ export default function Home() {
         </div>
       </div>
       {/* projects */}
-      <div className="flex flex-1 flex-col justify-center items-center">
-        <div className="flex flex-row justify-center items-center">
-          <StudyScribeCard/>
-          <PathFindingCard/>
-        </div>
-      </div>
+      <motion.div layout className="flex flex-1 flex-col justify-center items-center">
+        <motion.div layout className="flex flex-row justify-center items-center">
+            <StudyScribeCard/>
+            <PathFindingCard/>
+        </motion.div>
+      </motion.div>
     </main>
   )
 }
