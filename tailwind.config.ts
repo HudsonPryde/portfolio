@@ -14,7 +14,7 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       backgroundColor: {
-        'primary': '#fefefe',
+        'primary': '#f2e5de',
         'dark': '#141414',
       },
       fontFamily: {

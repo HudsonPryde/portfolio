@@ -5,7 +5,8 @@ import PathFindingCard from './components/PathFindingCard'
 import { motion, LayoutGroup } from 'framer-motion'
 export default function Home() {
   return (
-    <main className="flex w-screen h-screen flex-col p-12 font-inter overflow-x-hidden">
+    <main className="flex w-screen h-screen flex-col p-12 font-inter overflow-x-hidden items-center">
+      {/* header */}
       <div className="flex bg-primary w-full h-1/6 flex-col rounded-2xl justify-center m-2">
         <div className="flex flex-row items-center">
           <p className='text-8xl font-semibold align-middle tracking-tighter pl-6 font-young'>Hudson Pryde</p>
@@ -39,9 +40,17 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* description */}
+      <div className="bg-[#f7cdd8] flex flex-1 flex-row justify-center m-2 p-4 rounded-2xl">
+        <p className="text-xl font-raleway font-semibold">
+          Hi there! I&apos;m an undergraduate co-op student studying computer science at TMU, my interests include running 🏃, sci-fi 👽, AI 🤖, philosophy 📚, and software development 💻.
+          I&apos;m always experimenting and trying new things so keep an eye on my GitHub for my latest projects. Feel free to checkout my LinkedIn linked at the top of the page for my resume and detailed work experience.
+          I&apos;m very passionate about creating tools that help everyday people, so I&apos;m constantly striving to learn as much as I can in order to achieve my goals.
+        </p>
+      </div>
       {/* projects */}
       <motion.div layout className="flex flex-1 flex-col justify-center items-center">
-        <motion.div layout className="flex flex-row justify-center items-center">
+        <motion.div layout className="flex flex-row justify-center">
             <StudyScribeCard/>
             <PathFindingCard/>
         </motion.div>
