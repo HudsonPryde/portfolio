@@ -16,7 +16,7 @@ export default function PathFindingCard() {
         })
     }
     return (
-        <motion.main layout className={`flex flex-col p-6 bg-[#eb3d00] m-2 rounded-2xl font-raleway justify-between ${showContent ? 'max-w-4xl' : 'max-w-sm max-h-64'}`}>
+        <motion.main layout className={`flex flex-col p-6 bg-[#eb3d00] m-2 rounded-2xl font-raleway lg:justify-between justify-center ${showContent ? 'max-w-4xl' : 'max-w-sm max-h-64'}`}>
             <LayoutGroup>
             {!showContent ? 
             <motion.div className='flex flex-col'>
@@ -35,8 +35,8 @@ export default function PathFindingCard() {
             : 
             <motion.div>
                 <PathingTemplate>
-                    <div className="flex flex-row flex-1 justify-between items-center">
-                    <button onClick={() => toggleCard()} className='flex flex-row self-start justify-start items-center pb-4'><Image src="../../collapse-icon.svg" alt="collapse" width={30} height={30}/><p className="text-lg">Close</p></button>
+                    <div className="flex flex-row flex-1 lg:justify-between justify-evenly items-center lg:w-full w-screen">
+                    <button onClick={() => toggleCard()} className='flex flex-row self-center justify-start items-center'><Image src="../../collapse-icon.svg" alt="collapse" width={30} height={30}/><p className="text-lg">Close</p></button>
                      <a href="https://github.com/HudsonPryde/portfolio/tree/master/app/projects/pathing" target='_blank' rel='noopener'><Image src="./github-mark.svg" alt="github" height={24} width={44}/></a>
                     </div>
                     <Pathing />

@@ -147,14 +147,17 @@ export default function Pathing() {
 
     return (
         <main className='flex flex-col p-12 pt-8 font-inter overflow-x-hidden justify-center items-center font-raleway font-semibold transition-all duration-500'>
-            <div className='flex flex-row justify-center items-center bg-primary p-2 rounded-xl m-2'>
-                    <button disabled={pathing} className={`${selectButtonClass} border-green-500 ${settings.select === 'start' ? 'bg-green-500 text-white' : 'text-green-500'}`} onClick={() => dispatch({type: 'select', payload: 'start'})}><p className="text-md">S</p></button>
-                    <button disabled={pathing} className={`${selectButtonClass} border-blue-500 ${settings.select === 'end' ? 'bg-blue-500 text-white' : 'text-blue-500'}`} onClick={() => dispatch({type: 'select', payload: 'end'})}><p className="text-md">E</p></button>
-                    <button disabled={pathing} className={`${selectButtonClass} border-black ${settings.select === 'wall' ? 'bg-black text-white' : 'text-black'}`} onClick={() => dispatch({type: 'select', payload: 'wall'})}><p className="text-md">W</p></button>
-                    <div className='flex flex-col justify-center items-start text-white text-sm'>
-                        <div className="bg-dark rounded-full p-1 px-3 m-[1px]"><p>Set start/end node</p></div>
-                        <div className="bg-dark rounded-full p-1 px-3 m-[1px]"><p>Place/erase walls to change pathing</p></div>
-                    </div>
+            <div className='flex flex-row justify-center items-center bg-primary p-2 rounded-xl m-2 flex-wrap'>
+                {/* select buttons */}
+                <button disabled={pathing} className={`${selectButtonClass} border-green-500 ${settings.select === 'start' ? 'bg-green-500 text-white' : 'text-green-500'}`} onClick={() => dispatch({type: 'select', payload: 'start'})}><p className="text-md">S</p></button>
+                <button disabled={pathing} className={`${selectButtonClass} border-blue-500 ${settings.select === 'end' ? 'bg-blue-500 text-white' : 'text-blue-500'}`} onClick={() => dispatch({type: 'select', payload: 'end'})}><p className="text-md">E</p></button>
+                <button disabled={pathing} className={`${selectButtonClass} border-black ${settings.select === 'wall' ? 'bg-black text-white' : 'text-black'}`} onClick={() => dispatch({type: 'select', payload: 'wall'})}><p className="text-md">W</p></button>
+                <div className='flex flex-col justify-center items-start text-white text-sm'>
+                    <div className="bg-dark rounded-full p-1 px-3 m-[1px]"><p>Set start/end node</p></div>
+                    <div className="bg-dark rounded-full p-1 px-3 m-[1px]"><p>Place/erase walls to change pathing</p></div>
+                </div>
+                {/* action buttons */}
+                <div className='flex flex-row'>
                     <div className="flex flex-col items-center mx-1">
                     <button disabled={pathing} onClick={() => findPath()} style={{ backgroundSize: '600% 600%' }} className={`bg-emerald-500 ${pathButtonActiveClass} rounded-full p-2 m-[1px] text-white`}>
                         <Image src="../../path-icon.svg" width={30} height={30} alt="path" className="invert"/>
@@ -168,6 +171,7 @@ export default function Pathing() {
                     <p className="tracking-tighter text-sm">Refresh</p>
                     </div>
                 </div>
+            </div>
             {/* grid squares */}
             <div className='flex flex-col justufy-center items-center'>
             <div className='flex flex-col justify-center items-center h-96 w-96 bg-dark p-1 rounded-xl transition-all duration-500'>
@@ -191,7 +195,7 @@ export default function Pathing() {
             </div>
             <div className='flex flex-col ml-6 bg-primary p-1 px-4 rounded-xl mt-2'>
                 <div className="flex flex-row text-lg tracking-tighter items-center"><p>Grid size</p><p className="ml-4 px-2 w-8 flex-row justify-center border border-black rounded-xl">{size}</p></div>
-                <input type='range' onChange={(value) => setSize(Number(value.currentTarget.value))} className="accent-black" step={5} min={5} max={20} value={size} list={'sizes'}/>
+                <input type='range' onChange={(e) => setSize(Number(e.currentTarget.value))} className="accent-black" step={5} min={5} max={20} value={size} list={'sizes'}/>
             </div>
             </div>
         </main>
