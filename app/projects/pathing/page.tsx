@@ -11,7 +11,7 @@ export default function Pathing() {
     const [grid, setGrid] = useState<Grid>();
     // start and end nodes defined by user
     const [start, setStart] = useState<Node>(new Node(0,0));
-    const [end, setEnd] = useState<Node>(new Node(9,9));
+    const [end, setEnd] = useState<Node>(new Node(0,0));
     // final path to be displayed
     const [path, setPath] = useState<Node[]>([]);
     const [pathing, setPathing] = useState<boolean>(false);
@@ -100,13 +100,13 @@ export default function Pathing() {
                 const id = setTimeout(() => {
                     setPath(set)
                     showPath(path)
-                }, 100*index)
+                }, (1000/size)*index)
                 dispatchQueue({action:'add', payload:id})
             } else {
                 const id = setTimeout(() => {
                     console.log(pathing)
                     setPath(set)
-                }, 100*index)
+                }, (1000/size)*index)
                 dispatchQueue({action:'add', payload:id})
             }
         })
@@ -119,12 +119,12 @@ export default function Pathing() {
                 const id = setTimeout(() => {
                     setPath((prev) => [...prev, node])
                     setPathing(false)
-                }, 200*index)
+                }, (2000/size)*index)
                 dispatchQueue({action:'add', payload:id})
             } else {
                 const id = setTimeout(() => {
                     setPath((prev) => [...prev, node])
-                }, 200*index)
+                }, (2000/size)*index)
                 dispatchQueue({action:'add', payload:id})
             }
         })
@@ -169,7 +169,9 @@ export default function Pathing() {
                     </div>
                 </div>
             {/* grid squares */}
+            <div className='flex flex-col justufy-center items-center'>
             <div className='flex flex-col justify-center items-center h-96 w-96 bg-dark p-1 rounded-xl transition-all duration-500'>
+                
                 {grid?.nodes.map((row: Array<Node>, index: Key) => {
                     return (
                         <div key={index} className='flex flex-1 flex-row w-full h-16'>
@@ -186,6 +188,11 @@ export default function Pathing() {
                         </div>
                     );
                 })}
+            </div>
+            <div className='flex flex-col ml-6 bg-primary p-1 px-4 rounded-xl mt-2'>
+                <div className="flex flex-row text-lg tracking-tighter items-center"><p>Grid size</p><p className="ml-4 px-2 w-8 flex-row justify-center border border-black rounded-xl">{size}</p></div>
+                <input type='range' onChange={(value) => setSize(Number(value.currentTarget.value))} className="accent-black" step={5} min={5} max={20} value={size} list={'sizes'}/>
+            </div>
             </div>
         </main>
     );
