@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
       {/* description */}
-      <div className="bg-[#f7cdd8] flex flex-1 flex-row justify-center m-2 p-4 rounded-2xl">
+      <div className="bg-[#f7cdd8] flex flex-1 flex-row justify-center p-4 rounded-2xl">
         <p className="text-xl font-raleway font-semibold">
           Hi there! I&apos;m an undergraduate co-op student studying computer science at TMU, my interests include running 🏃, sci-fi 👽, AI 🤖, philosophy 📚, and software development 💻.
           I&apos;m always experimenting and trying new things so keep an eye on my GitHub for my latest projects. Feel free to checkout my LinkedIn linked at the top of the page for my resume and detailed work experience.
